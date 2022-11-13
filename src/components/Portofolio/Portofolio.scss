@@ -1,0 +1,82 @@
+.projects {
+    width: 50%;
+    height: 100%;
+    top: 8%;
+    position: absolute;
+    right: 5%;
+    overflow: hidden;
+    display: flex;
+
+    .project {
+        border-radius: 2rem;
+        width: 50rem;
+        height: 50rem;
+        border: 1px solid black;
+        overflow: hidden;
+        margin-right: 1rem;
+        background-color: rgb(255, 255, 255);
+
+        .link-project {
+            background: #121c1f;
+            color: #ffd700;
+            font-size: 1.6rem;
+            padding: 1rem;
+            margin: 2rem;
+            display: block;
+            width: 14rem;
+            border-radius: 1.4rem;
+            text-decoration: none;
+            text-align: center;
+            transition: all .3s;
+            animation: fadeIn 1s 1.8s backwards;
+
+            &:hover {
+                background: #ffd700;
+                color: #121c1f;
+            }
+
+            .icon {
+                margin-left: 1rem;
+            }
+        }
+
+        img {
+            transition: all 0.3s ease;
+            width: 33rem;
+            transform: rotate(20deg) skew(-6deg);
+            animation: fadeIn 1s 1.8s backwards;
+            
+            &:hover {
+                opacity: 0.7;
+                transform: rotate(20deg) skew(-9deg) scale(1.2);
+                    
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .projects {
+        margin-top: 1rem;
+        width: 100%;
+        position: relative;
+        top: 0;
+        right: 0;
+        display: flex;
+        gap: 2rem;
+        flex-direction: column;
+
+        .project {
+            height: 30rem;
+            width: 100%;
+
+            img {
+                margin-top: -2rem;
+                margin-right: -3rem;
+                z-index: -1;
+                width: 33rem;
+            }
+        }
+    }
+}

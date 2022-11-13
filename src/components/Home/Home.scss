@@ -1,0 +1,149 @@
+.home-page {
+    .text-zone {
+        position: absolute;
+        left: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40%;
+        max-height: 90%;
+    }
+
+    h1 {
+        color: #fff;
+        font-size: 56px;
+        line-height: 53px;
+        margin: 0;
+        font-family: sans-serif;
+        font-weight: 400;
+
+        &:before {
+            content: '<h1>';
+            font-family: sans-serif;
+            color: #181c1b;
+            font-size: 18px;
+            position: absolute;
+            margin-top: -50px;
+            left: .6rem;
+        }
+
+        &:after {
+            content: '<h1/>';
+            font-family: sans-serif;
+            color: #181c1b;
+            font-size: 18px;
+            position: absolute;
+            margin-top: 6px;
+            margin-left: 20px;
+            animation: fadeIn 1s 1.7s backwards;
+        }
+
+        img {
+            opacity: 0;
+            margin: 0 0 -4px 5px;
+            width: 40px;
+            height: auto;
+            animation: rotateIn 1s linear both;
+            animation-delay: 1.4s;
+        }
+    }
+
+    h2 {
+        color: #444;
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: 13px;
+        font-family: sans-serif;
+        letter-spacing: 3px;
+        animation: fadeIn 1s 1.8s backwards;
+    }
+
+    .flat-button {
+        color: #ffd700;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 4px;
+        font-family: sans-serif;
+        background: #2c4546;
+        text-decoration: none;
+        padding: 10px 18px;
+        border: 1px solid #ffd700;
+        margin-top: 25px;
+        float: left;
+        animation: fadeInAnimation 1s 1.8s backwards;
+        white-space: nowrap;
+
+        &:hover {
+            background: #ffd700;
+            color: #333;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 1200px) {
+
+    .tags{
+        display: none;
+    }
+
+    .home-page h1:before {
+        margin-top: -50px;
+        left: 0.8rem;
+    }
+
+    .home-page h1:after {
+        margin-top: 30px;
+        margin-left: -1px;
+        position: relative;
+    }
+
+    .home-page h1 {
+        font-size: 42px;
+        margin-top: 50px;
+
+        img {
+            width: 32px;
+        }
+    }
+
+    .home-page h2 {
+        margin-top: 0;
+    }
+
+    .home-page .text-zone {
+        position: initial;
+        width: 100%;
+        transform: none;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .home-page .flat-button {
+        float: left;
+        font-size: 1rem;
+        display: block;
+        margin: 20px auto 0 auto;
+        width: 124px;
+    }
+
+    .logo-container {
+        position: relative;
+        width: 100px;
+        height: auto;
+        top: 50px;
+        right: 0;
+        box-sizing: border-box;
+        margin: auto;
+        left: 0;
+    }
+
+    .logo-container svg {
+        position: absolute;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: 0;
+        margin: auto;
+    }
+}

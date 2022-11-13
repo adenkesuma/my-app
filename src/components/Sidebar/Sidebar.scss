@@ -1,0 +1,198 @@
+.nav-bar {
+    width: 6rem;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    min-height: 500px;
+    background: #161f1d;
+    z-index: 5;
+
+    .Logo {
+        // position: relative;
+        padding-top: 15px;
+        display: flex;
+        justify-content: center;
+
+        .sub-logo {
+            width: 45px;
+            height: 55px;
+        }
+    }
+
+    nav {
+        display: block;
+        text-align: center;
+        position: absolute;
+        height: 210px;
+        top: 50%;
+        margin-top: -100px;
+        width: 100%;
+
+        a {
+            font-size: 20px;
+            display: block;
+            position: relative;
+            text-decoration: none;
+            margin-bottom: 10px;
+
+            i {
+                transition: all 0.3s ease-out;
+            }
+            
+            &:hover {
+                color: #ffd700;
+            
+                svg {
+                        opacity: 0;
+                }
+            
+                &:after {
+                        opacity: 1;
+                }
+            }
+            
+            &:after {
+                content: '';
+                font-size: 10px;
+                letter-spacing: 2px;
+                position: absolute;
+                bottom: 0;
+                display: block;
+                width: 100%;
+                text-align: center;
+                opacity: 0;
+                -webkit-transition: all 0.3s ease-out;
+                transition: all 0.3s ease-out;
+            }
+            
+            &:first-child {
+                &:after {
+                    content: 'HOME';
+                }
+            }
+        }
+
+        a.about-link {
+            &:after {
+                content: "ABOUT";
+            }
+        }
+
+        a.contact-link {
+            &:after {
+                content: "CONTACT";
+            }
+        }
+
+        a.portofolio-link {
+            &:after {
+                content: "PORTOFOLIO";
+            }
+        }
+
+        a.active {
+            svg {
+                color: #ffff;
+            }
+        }
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        bottom: 20px;
+        text-align: center;
+        display: block;
+        width: 100%;
+
+        li {
+            list-style: none;
+            margin-bottom: 5px;
+
+            a {
+                text-decoration: none;
+                font-size: 15px;
+                color: #999;
+                display: block;
+            }
+
+            &:hover {
+                .sidebar__icon-sosmed {
+                    color: #ffd700;
+                }
+            }
+        }
+    }
+
+    .close-icon,
+    .hamburger-icon {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .nav-bar {
+        background: transparent;
+        position: initial;
+        height: auto;
+        min-height: auto;
+
+        ul,
+        nav {
+            display: none;
+        }
+
+        nav {
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: #181818;
+            height: 100%;
+            margin: 0;
+            z-index: 2;
+            position: fixed;
+
+            &.mobile-show {
+                display: block;
+            }
+            
+            div {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 2rem;
+
+                a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                a:after {
+                    opacity: 1;
+                    position: initial;
+                    width: auto;
+                    margin-left: 10px;
+                }
+
+                a svg {
+                    opacity: 1 !important;
+                }
+            }
+        }
+
+        .hamburger-icon,
+        .close-icon {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            display: block;
+        }
+    }
+}

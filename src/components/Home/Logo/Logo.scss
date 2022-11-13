@@ -1,0 +1,38 @@
+.logo {
+    width: 550px;
+    height: 609px;
+    position: absolute;
+    top: 0;
+    right: 10%;
+    bottom: 0;
+    left: auto;
+    margin: auto;
+
+    .logo__img {
+        position: absolute;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: 0;
+        margin: auto;
+        width: 100%;
+        animation: fadeIn 1s 2s backwards;
+        transform: rotate(-5deg);
+        z-index: 999;
+    }
+}
+
+@media (max-width: 40rem) {
+    .logo {
+        width: 25rem;
+        height: 0;
+        margin-top: 36rem;
+        left: 5%;
+
+        .logo__img {
+            width: 100%;
+            position: absolute;
+
+        }
+    }
+}

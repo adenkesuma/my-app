@@ -3,7 +3,6 @@ import { useState } from 'react';
 import LogoA from '../../assets/NameLogo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-    faLinkedin,
     faGithub,
     faYoutube
 } from '@fortawesome/free-brands-svg-icons';
@@ -68,12 +67,12 @@ const Sidebar = () => {
             </nav>
             <ul>
                 <li>
-                    <a href="" target="_blank" rel="noreferrer">
+                    <a href="https://github.com/adenkesuma" target="_blank" rel="noreferrer">
                         <FontAwesomeIcon icon={faGithub} color="#999" className='anchor-icon'></FontAwesomeIcon>
                     </a>
                 </li>
                 <li>
-                    <a href="" target="_blank" rel="noreferrer">
+                    <a href="https://youtu.be/tkbqnsiwrkk" target="_blank" rel="noreferrer">
                         <FontAwesomeIcon icon={faYoutube} color="#999" className='anchor-icon'></FontAwesomeIcon>
                     </a>
                 </li>          
